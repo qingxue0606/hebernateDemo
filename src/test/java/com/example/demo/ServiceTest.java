@@ -28,10 +28,15 @@ import com.example.demo.service.impl.ClassRoomToStudentOneToManyImpl;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+/**
+ * 
+ * @author xiang
+ * @date 2018/11/15
+ */
 public class ServiceTest extends HebernateDemoApplicationTests {
 
     
-     //private TestServiceImpl testServiceImpl=new TestServiceImpl();
+    
     @Autowired(required=true)
     private PersonService personService;
     
@@ -47,6 +52,9 @@ public class ServiceTest extends HebernateDemoApplicationTests {
      @Test
      public void testOneToMany() {
          classRoomToStudentOneToMany.funTest();
+        
+         
+        //i= (i == 0) ? 1 : 0;
 
          
 
