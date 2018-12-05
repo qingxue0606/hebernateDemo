@@ -26,20 +26,15 @@ public class UserServiceTest extends HebernateDemoApplicationTests {
     public void testFindByName() {
         List<NameOnly> list= userService.findByName("1");
         for (NameOnly nameOnly : list) {
-            
-            
+
             System.out.println(nameOnly.getName());
         }
-        
-
     }
     
     @Test
     public void testFindAll() {
         List<User> users=userService.findAll();
         System.out.println(users);
-        
-        
 
     }
     
