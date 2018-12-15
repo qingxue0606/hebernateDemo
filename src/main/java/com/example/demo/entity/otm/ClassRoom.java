@@ -24,7 +24,7 @@ public class ClassRoom {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column
-     private int cid;
+     private Integer cid;
      private String cname;
      
      

@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="debug">
+   <!-- 常量引用 -->
+    <properties>
+        <!-- <property name="LOG_HOME">/home/log</property> -->
+        <property name="LOG_HOME">E:/log</property>
+        <property name="FORMAT">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level >>> %logger{36} - %msg%n</property>
+    </properties>
+
+
     <Appenders>
+    <!-- 常见的输出到console,常用于开发环境中,默认是system_err,还有一个system_out -->
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout
-                pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <patternLayout pattern="${FORMAT}" />
         </Console>
     </Appenders>
     <Loggers>
@@ -14,7 +22,5 @@
             additivity="false">
             <AppenderRef ref="Console" />
         </Logger>
-
     </Loggers>
-
 </Configuration>

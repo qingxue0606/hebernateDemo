@@ -1,7 +1,11 @@
  package com.example.demo;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,6 +14,7 @@ import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 
 public class UserServiceTest extends HebernateDemoApplicationTests {
+    private Logger logger=LogManager.getLogger(UserServiceTest.class.getName());
     @Autowired
      private UserService userService;
     
@@ -35,7 +40,7 @@ public class UserServiceTest extends HebernateDemoApplicationTests {
     public void testFindAll() {
         List<User> users=userService.findAll();
         System.out.println(users);
-
+        logger.info(users);
     }
     
 
